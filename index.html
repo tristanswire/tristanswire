@@ -3,15 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal website and portfolio">
-    <title>Your Name - Personal Website</title>
+
+    <!-- Primary Meta Tags -->
+    <title>Your Name - Web Developer & Designer</title>
+    <meta name="title" content="Your Name - Web Developer & Designer">
+    <meta name="description" content="Personal website and portfolio of Your Name. Showcasing web development projects, design work, and technical insights. Specializing in modern, responsive web applications.">
+    <meta name="keywords" content="web developer, designer, portfolio, web design, front-end development, responsive design">
+    <meta name="author" content="Your Name">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:title" content="Your Name - Web Developer & Designer">
+    <meta property="og:description" content="Personal website and portfolio showcasing web development projects and design work.">
+    <meta property="og:image" content="https://yourdomain.com/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourdomain.com/">
+    <meta property="twitter:title" content="Your Name - Web Developer & Designer">
+    <meta property="twitter:description" content="Personal website and portfolio showcasing web development projects and design work.">
+    <meta property="twitter:image" content="https://yourdomain.com/twitter-image.jpg">
+    <meta name="twitter:creator" content="@yourusername">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#2563eb">
+
+    <!-- Performance & SEO -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://yourdomain.com/">
+
+    <!-- Preconnect for performance (if using external resources) -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <a href="#" class="nav__logo">Your Name</a>
-            <ul class="nav__list">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <a href="#hero" class="nav__logo" aria-label="Your Name - Home">Your Name</a>
+            <ul class="nav__list" role="list">
                 <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                 <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
                 <li class="nav__item"><a href="#newsletter" class="nav__link">Newsletter</a></li>
@@ -20,18 +62,18 @@
         </nav>
     </header>
 
-    <main>
-        <section class="hero" id="hero">
+    <main id="main-content" role="main">
+        <section class="hero" id="hero" aria-labelledby="hero-title">
             <div class="hero__content">
-                <h1 class="hero__title">Hello, I'm Your Name</h1>
+                <h1 id="hero-title" class="hero__title">Hello, I'm Your Name</h1>
                 <p class="hero__subtitle">Web Developer & Designer</p>
-                <a href="#contact" class="hero__cta">Get in touch</a>
+                <a href="#contact" class="hero__cta" aria-label="Navigate to contact section">Get in touch</a>
             </div>
         </section>
 
-        <section class="about" id="about">
+        <section class="about" id="about" aria-labelledby="about-title">
             <div class="container">
-                <h2 class="section__title animate-on-scroll">About Me</h2>
+                <h2 id="about-title" class="section__title animate-on-scroll">About Me</h2>
                 <div class="about__content animate-on-scroll">
                     <p>I'm a passionate web developer with expertise in creating modern, responsive websites. I love turning complex problems into simple, beautiful solutions.</p>
                     <p>With a strong focus on user experience and clean code, I build digital experiences that help businesses grow and users thrive.</p>
@@ -39,19 +81,28 @@
             </div>
         </section>
 
-        <section class="work" id="work">
+        <section class="work" id="work" aria-labelledby="work-title">
             <div class="container">
-                <h2 class="section__title animate-on-scroll">Projects</h2>
-                <div class="work__grid stagger-animation">
-                    <article class="project animate-on-scroll">
+                <h2 id="work-title" class="section__title animate-on-scroll">Projects</h2>
+                <div class="work__grid stagger-animation" role="list">
+                    <article class="project animate-on-scroll" role="listitem">
+                        <!-- Image placeholder - add your project image here
+                        <img src="project-1.jpg" alt="Screenshot of Project One showing [describe key visual]" class="project__image" loading="lazy">
+                        -->
                         <h3 class="project__title">Project One</h3>
                         <p class="project__description">A brief description of this project and the technologies used.</p>
                     </article>
-                    <article class="project animate-on-scroll">
+                    <article class="project animate-on-scroll" role="listitem">
+                        <!-- Image placeholder - add your project image here
+                        <img src="project-2.jpg" alt="Screenshot of Project Two showing [describe key visual]" class="project__image" loading="lazy">
+                        -->
                         <h3 class="project__title">Project Two</h3>
                         <p class="project__description">A brief description of this project and the technologies used.</p>
                     </article>
-                    <article class="project animate-on-scroll">
+                    <article class="project animate-on-scroll" role="listitem">
+                        <!-- Image placeholder - add your project image here
+                        <img src="project-3.jpg" alt="Screenshot of Project Three showing [describe key visual]" class="project__image" loading="lazy">
+                        -->
                         <h3 class="project__title">Project Three</h3>
                         <p class="project__description">A brief description of this project and the technologies used.</p>
                     </article>
@@ -59,10 +110,10 @@
             </div>
         </section>
 
-        <section class="newsletter" id="newsletter">
+        <section class="newsletter" id="newsletter" aria-labelledby="newsletter-title">
             <div class="container">
                 <div class="newsletter__content">
-                    <h2 class="newsletter__title animate-on-scroll">Stay Updated</h2>
+                    <h2 id="newsletter-title" class="newsletter__title animate-on-scroll">Stay Updated</h2>
                     <p class="newsletter__description animate-on-scroll">
                         Subscribe to my newsletter for the latest insights on web development, design trends, and tech updates delivered straight to your inbox.
                     </p>
@@ -100,23 +151,23 @@
             </div>
         </section>
 
-        <section class="contact" id="contact">
+        <section class="contact" id="contact" aria-labelledby="contact-title">
             <div class="container">
-                <h2 class="section__title animate-on-scroll">Get In Touch</h2>
+                <h2 id="contact-title" class="section__title animate-on-scroll">Get In Touch</h2>
                 <div class="contact__content animate-on-scroll">
                     <p>I'm always open to discussing new projects, creative ideas, or opportunities.</p>
-                    <div class="contact__links">
-                        <a href="mailto:your.email@example.com" class="contact__link">Email</a>
-                        <a href="https://github.com/yourusername" class="contact__link" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        <a href="https://linkedin.com/in/yourusername" class="contact__link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                        <a href="https://twitter.com/yourusername" class="contact__link" target="_blank" rel="noopener noreferrer">Twitter</a>
-                    </div>
+                    <nav class="contact__links" aria-label="Social media and contact links">
+                        <a href="mailto:your.email@example.com" class="contact__link" aria-label="Send email to Your Name">Email</a>
+                        <a href="https://github.com/yourusername" class="contact__link" target="_blank" rel="noopener noreferrer" aria-label="Visit Your Name's GitHub profile (opens in new tab)">GitHub</a>
+                        <a href="https://linkedin.com/in/yourusername" class="contact__link" target="_blank" rel="noopener noreferrer" aria-label="Visit Your Name's LinkedIn profile (opens in new tab)">LinkedIn</a>
+                        <a href="https://twitter.com/yourusername" class="contact__link" target="_blank" rel="noopener noreferrer" aria-label="Visit Your Name's Twitter profile (opens in new tab)">Twitter</a>
+                    </nav>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <p>&copy; 2025 Your Name. All rights reserved.</p>
         </div>
