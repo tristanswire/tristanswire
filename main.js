@@ -146,6 +146,52 @@
     }
 
     // ===================================
+    // Scroll Animations
+    // ===================================
+
+    /**
+     * Initialize scroll-based animations using Intersection Observer
+     * Animates elements when they come into viewport
+     */
+    function initScrollAnimations() {
+        // Check if user prefers reduced motion
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (prefersReducedMotion) {
+            // Skip animations if user prefers reduced motion
+            return;
+        }
+
+        // Select all elements with animation classes
+        const animatedElements = document.querySelectorAll('.animate-on-scroll, .animate-fade');
+
+        // Configuration for intersection observer
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -100px 0px', // Trigger when element is 100px from viewport bottom
+            threshold: 0.1 // Trigger when 10% of element is visible
+        };
+
+        // Create intersection observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Add animate-in class to trigger animation
+                    entry.target.classList.add('animate-in');
+
+                    // Stop observing this element once it's animated
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        animatedElements.forEach(element => {
+            observer.observe(element);
+        });
+    }
+
+    // ===================================
     // Initialize All Features
     // ===================================
 
@@ -156,6 +202,7 @@
         initScrollSpy();
         initSmoothScroll();
         initHeaderScrollBehavior();
+        initScrollAnimations();
     }
 
     // Run when DOM is fully loaded
