@@ -123,6 +123,11 @@ body {
     background-color: var(--color-background);
     border-bottom: 1px solid var(--color-border);
     z-index: 100;
+    transition: box-shadow 0.3s ease;
+}
+
+.header--scrolled {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .nav {
@@ -149,10 +154,25 @@ body {
     color: var(--color-text);
     font-weight: var(--font-weight-medium);
     transition: color 0.2s;
+    position: relative;
 }
 
 .nav__link:hover {
     color: var(--color-primary);
+}
+
+.nav__link--active {
+    color: var(--color-primary);
+}
+
+.nav__link--active::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--color-primary);
 }
 
 /* ===================================
