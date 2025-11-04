@@ -258,6 +258,56 @@ body {
     }
 }
 
+/* Newsletter Section */
+.newsletter {
+    padding: 120px 0;
+    border-top: 1px solid #e5e5e5;
+}
+
+.newsletter h2 {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #737373;
+    margin-bottom: 48px;
+}
+
+.newsletter-content {
+    max-width: 640px;
+}
+
+.newsletter-content p {
+    font-size: 18px;
+    line-height: 1.75;
+    color: #404040;
+    margin-bottom: 48px;
+    letter-spacing: -0.01em;
+}
+
+.newsletter-embed {
+    /* Container for Substack/Beehiiv embed */
+}
+
+.newsletter-embed iframe {
+    max-width: 100%;
+    width: 100%;
+}
+
+/* Newsletter Placeholder - Remove when adding actual embed */
+.newsletter-placeholder {
+    padding: 48px 32px;
+    border: 1px dashed #d4d4d4;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.newsletter-placeholder p {
+    font-size: 15px;
+    color: #a3a3a3;
+    margin: 0;
+}
+
 /* Contact Section */
 .contact {
     padding: 120px 0;
@@ -308,11 +358,34 @@ body {
 
 /* Footer */
 .footer {
-    padding: 60px 0;
+    padding: 80px 0 60px;
     border-top: 1px solid #e5e5e5;
 }
 
-.footer p {
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.footer-links a {
+    color: #737373;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #111;
+}
+
+.footer-copyright {
     font-size: 14px;
     color: #a3a3a3;
     letter-spacing: 0;
@@ -365,12 +438,14 @@ body {
 
     .about,
     .work,
+    .newsletter,
     .contact {
         padding: 80px 0;
     }
 
     .about h2,
     .work h2,
+    .newsletter h2,
     .contact h2 {
         margin-bottom: 40px;
     }
@@ -416,6 +491,14 @@ body {
 
     .project p {
         font-size: 16px;
+    }
+
+    .newsletter-content p {
+        font-size: 17px;
+    }
+
+    .newsletter-placeholder {
+        padding: 32px 24px;
     }
 
     .contact-content p {

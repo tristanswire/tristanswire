@@ -6,24 +6,22 @@
 
     <!-- Primary Meta Tags -->
     <title>Your Name - Developer & Designer</title>
-    <meta name="title" content="Your Name - Developer & Designer">
-    <meta name="description" content="Personal website and portfolio of Your Name. Showcasing web development projects and design work.">
-    <meta name="keywords" content="web developer, designer, portfolio, web design, front-end development">
+    <meta name="description" content="Personal website and portfolio of Your Name. Designer and developer creating thoughtful digital products and experiences.">
     <meta name="author" content="Your Name">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yourdomain.com/">
     <meta property="og:title" content="Your Name - Developer & Designer">
-    <meta property="og:description" content="Personal website and portfolio showcasing web development projects and design work.">
+    <meta property="og:description" content="Designer and developer creating thoughtful digital products and experiences.">
     <meta property="og:image" content="https://yourdomain.com/og-image.jpg">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://yourdomain.com/">
-    <meta property="twitter:title" content="Your Name - Developer & Designer">
-    <meta property="twitter:description" content="Personal website and portfolio showcasing web development projects and design work.">
-    <meta property="twitter:image" content="https://yourdomain.com/twitter-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://yourdomain.com/">
+    <meta name="twitter:title" content="Your Name - Developer & Designer">
+    <meta name="twitter:description" content="Designer and developer creating thoughtful digital products and experiences.">
+    <meta name="twitter:image" content="https://yourdomain.com/twitter-image.jpg">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -39,26 +37,27 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header" role="banner">
         <div class="container">
-            <h1 class="logo">Your Name</h1>
-            <nav class="nav">
+            <a href="#hero" class="logo">Your Name</a>
+            <nav class="nav" role="navigation" aria-label="Main navigation">
                 <a href="#about">About</a>
                 <a href="#work">Work</a>
+                <a href="#newsletter">Newsletter</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main>
+    <main role="main">
         <!-- Hero Section -->
-        <section class="hero">
+        <section id="hero" class="hero">
             <div class="container">
-                <p class="intro">
+                <h1 class="intro">
                     Hi, I'm a designer and developer based in [Location].
                     I build thoughtful digital products and experiences.
-                </p>
+                </h1>
             </div>
         </section>
 
@@ -139,6 +138,43 @@
             </div>
         </section>
 
+        <!-- Newsletter Section -->
+        <section id="newsletter" class="newsletter">
+            <div class="container">
+                <h2>Newsletter</h2>
+                <div class="newsletter-content">
+                    <p>
+                        Subscribe to get occasional updates on new projects, thoughts on design and development, and other interesting things.
+                    </p>
+                    <!-- Newsletter Embed Placeholder -->
+                    <div class="newsletter-embed">
+                        <!--
+                            SUBSTACK/BEEHIIV EMBED CODE GOES HERE
+
+                            For Substack:
+                            1. Go to your Substack Settings → Publication details
+                            2. Copy the embed code
+                            3. Paste it here replacing this comment
+
+                            For Beehiiv:
+                            1. Go to your Beehiiv dashboard → Grow
+                            2. Click "Embeddable forms"
+                            3. Copy the embed code
+                            4. Paste it here replacing this comment
+
+                            Example:
+                            <iframe src="..." frameborder="0" scrolling="no"></iframe>
+                        -->
+
+                        <!-- Placeholder - Remove when adding actual embed -->
+                        <div class="newsletter-placeholder">
+                            <p>Newsletter signup form will appear here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section id="contact" class="contact">
             <div class="container">
@@ -159,9 +195,17 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
-            <p>&copy; 2025 Your Name</p>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="mailto:your.email@example.com">Email</a>
+                    <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">Twitter</a>
+                    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </div>
+                <p class="footer-copyright">&copy; 2025 Your Name. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
