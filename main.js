@@ -1,216 +1,66 @@
 /**
- * Personal Website - Main JavaScript
- * Handles navigation active states and scroll behavior
+ * Minimal interactions for personal website
+ * Smooth scroll and simple sticky header
  */
 
 (function() {
     'use strict';
 
-    // ===================================
-    // Intersection Observer for Active Nav States
-    // ===================================
-
-    /**
-     * Set up intersection observer to detect which section is in view
-     * and update navigation active states accordingly
-     */
-    function initScrollSpy() {
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav__link');
-
-        // Configuration for intersection observer
-        const observerOptions = {
-            root: null,
-            rootMargin: '-20% 0px -60% 0px', // Trigger when section is ~20% from top
-            threshold: 0
-        };
-
-        // Create intersection observer
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const sectionId = entry.target.getAttribute('id');
-                    updateActiveNavLink(sectionId, navLinks);
-                }
-            });
-        }, observerOptions);
-
-        // Observe all sections
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    }
-
-    /**
-     * Update the active state of navigation links
-     * @param {string} activeSectionId - The ID of the currently active section
-     * @param {NodeList} navLinks - All navigation links
-     */
-    function updateActiveNavLink(activeSectionId, navLinks) {
-        navLinks.forEach(link => {
-            const href = link.getAttribute('href');
-
-            // Remove active class from all links
-            link.classList.remove('nav__link--active');
-
-            // Add active class to the link matching the active section
-            if (href === `#${activeSectionId}`) {
-                link.classList.add('nav__link--active');
-            }
-        });
-    }
-
-    // ===================================
-    // Smooth Scroll Enhancement
-    // ===================================
-
-    /**
-     * Add smooth scroll behavior to navigation links
-     * Enhances CSS smooth-scroll with offset for sticky header
-     */
+    // Smooth scroll to sections
     function initSmoothScroll() {
-        const navLinks = document.querySelectorAll('.nav__link');
+        const navLinks = document.querySelectorAll('.nav a[href^="#"]');
 
         navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                const href = link.getAttribute('href');
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
 
-                // Only handle internal links
-                if (href && href.startsWith('#')) {
-                    const targetId = href.substring(1);
-                    const targetSection = document.getElementById(targetId);
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
 
-                    if (targetSection) {
-                        e.preventDefault();
+                if (targetSection) {
+                    const headerOffset = 80; // Account for sticky header
+                    const elementPosition = targetSection.offsetTop;
+                    const offsetPosition = elementPosition - headerOffset;
 
-                        // Get header height for offset
-                        const header = document.querySelector('.header');
-                        const headerHeight = header ? header.offsetHeight : 0;
-
-                        // Calculate target position with offset
-                        const targetPosition = targetSection.offsetTop - headerHeight;
-
-                        // Smooth scroll to target
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-
-                        // Update URL hash without jumping
-                        history.pushState(null, null, href);
-                    }
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
                 }
             });
         });
     }
 
-    // ===================================
-    // Header Scroll Behavior
-    // ===================================
-
-    /**
-     * Add visual feedback to header when scrolling
-     * Adds shadow when user scrolls down
-     */
-    function initHeaderScrollBehavior() {
+    // Add subtle shadow to header on scroll
+    function initStickyHeader() {
         const header = document.querySelector('.header');
-        let lastScrollY = window.scrollY;
+        let lastScroll = 0;
 
         function handleScroll() {
-            const currentScrollY = window.scrollY;
+            const currentScroll = window.pageYOffset;
 
-            // Add shadow class when scrolled down
-            if (currentScrollY > 10) {
+            if (currentScroll > 50) {
                 header.classList.add('header--scrolled');
             } else {
                 header.classList.remove('header--scrolled');
             }
 
-            lastScrollY = currentScrollY;
+            lastScroll = currentScroll;
         }
 
-        // Throttle scroll event for performance
-        let ticking = false;
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    handleScroll();
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        });
-
-        // Check initial state
-        handleScroll();
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll(); // Check on load
     }
 
-    // ===================================
-    // Scroll Animations
-    // ===================================
-
-    /**
-     * Initialize scroll-based animations using Intersection Observer
-     * Animates elements when they come into viewport
-     */
-    function initScrollAnimations() {
-        // Check if user prefers reduced motion
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-        if (prefersReducedMotion) {
-            // Skip animations if user prefers reduced motion
-            return;
-        }
-
-        // Select all elements with animation classes
-        const animatedElements = document.querySelectorAll('.animate-on-scroll, .animate-fade');
-
-        // Configuration for intersection observer
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px 0px -100px 0px', // Trigger when element is 100px from viewport bottom
-            threshold: 0.1 // Trigger when 10% of element is visible
-        };
-
-        // Create intersection observer
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Add animate-in class to trigger animation
-                    entry.target.classList.add('animate-in');
-
-                    // Stop observing this element once it's animated
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        // Observe all animated elements
-        animatedElements.forEach(element => {
-            observer.observe(element);
-        });
-    }
-
-    // ===================================
-    // Initialize All Features
-    // ===================================
-
-    /**
-     * Initialize all features when DOM is ready
-     */
-    function init() {
-        initScrollSpy();
-        initSmoothScroll();
-        initHeaderScrollBehavior();
-        initScrollAnimations();
-    }
-
-    // Run when DOM is fully loaded
+    // Initialize when DOM is ready
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
+        document.addEventListener('DOMContentLoaded', function() {
+            initSmoothScroll();
+            initStickyHeader();
+        });
     } else {
-        // DOM is already loaded
-        init();
+        initSmoothScroll();
+        initStickyHeader();
     }
 
 })();
