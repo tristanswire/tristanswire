@@ -58,6 +58,11 @@ body {
     font-weight: 600;
     letter-spacing: -0.03em;
     color: #111;
+    transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+    opacity: 0.6;
 }
 
 .nav {
@@ -83,7 +88,7 @@ body {
     width: 0;
     height: 1px;
     background-color: #111;
-    transition: width 0.25s ease;
+    transition: width 0.2s ease;
 }
 
 .nav a:hover {
@@ -163,11 +168,17 @@ body {
 .project {
     padding-bottom: 64px;
     border-bottom: 1px solid #f5f5f5;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
 }
 
 .project:last-child {
     padding-bottom: 0;
     border-bottom: none;
+}
+
+.project:hover {
+    transform: translateY(-2px);
 }
 
 .project-header {
@@ -185,6 +196,11 @@ body {
     letter-spacing: -0.03em;
     line-height: 1.3;
     margin: 0;
+    transition: color 0.2s ease;
+}
+
+.project:hover h3 {
+    color: #404040;
 }
 
 .project-link {
@@ -194,11 +210,13 @@ body {
     font-weight: 400;
     white-space: nowrap;
     letter-spacing: -0.01em;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-block;
 }
 
 .project-link:hover {
     color: #111;
+    transform: translateX(2px);
 }
 
 .project p {
@@ -227,8 +245,16 @@ body {
     }
 
     .project {
-        padding-bottom: 0;
+        padding: 32px;
+        padding-bottom: 32px;
         border-bottom: none;
+        border-radius: 8px;
+        margin: -32px;
+    }
+
+    .project:hover {
+        background-color: #fafafa;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     }
 }
 
@@ -270,11 +296,14 @@ body {
     letter-spacing: -0.01em;
     padding-bottom: 3px;
     border-bottom: 1px solid #d4d4d4;
-    transition: border-color 0.2s ease;
+    transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    display: inline-block;
 }
 
 .contact-links a:hover {
     border-bottom-color: #111;
+    color: #404040;
+    transform: translateY(-1px);
 }
 
 /* Footer */
@@ -356,6 +385,14 @@ body {
 
     .project {
         padding-bottom: 48px;
+        margin: 0;
+        padding: 0 0 48px 0;
+    }
+
+    .project:hover {
+        transform: none;
+        background-color: transparent;
+        box-shadow: none;
     }
 
     .project:last-child {
