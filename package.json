@@ -1,0 +1,17 @@
+{
+  "name": "tristanswire-personal-site",
+  "version": "1.0.0",
+  "description": "Personal website with minimal design",
+  "scripts": {
+    "start": "live-server --port=3000 --open=/ --watch=index.html,styles.css,main.js,images"
+  },
+  "keywords": [
+    "personal-website",
+    "portfolio"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
