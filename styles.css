@@ -86,3 +86,44 @@ p:last-child {
 .about-link:hover {
     text-decoration: underline;
 }
+
+/* Creating Section */
+.creating h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.project-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.project-link:hover {
+    color: #4A90E2;
+}
+
+.project-description {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
