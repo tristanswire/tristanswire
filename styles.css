@@ -215,6 +215,17 @@ p:last-child {
     margin: 0;
 }
 
+.footer-email {
+    font-size: 14px;
+    color: #777;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-email:hover {
+    color: #4a90e2;
+}
+
 .social-links {
     display: flex;
     gap: 12px;
