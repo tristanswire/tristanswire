@@ -19,16 +19,16 @@ body {
 .container {
     max-width: 650px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 60px 30px;
 }
 
 /* Section Spacing */
 section {
-    margin-bottom: 60px;
+    margin-bottom: 90px;
 }
 
 section:last-child {
-    margin-bottom: 0;
+    margin-bottom: 60px;
 }
 
 /* Typography */
@@ -57,14 +57,14 @@ p:last-child {
 
 /* Intro Section */
 .intro {
-    margin-top: 20px;
+    margin-top: 0;
 }
 
 .profile-photo {
     width: 70px;
     height: 70px;
     border-radius: 6px;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
     display: block;
     object-fit: cover;
 }
@@ -73,13 +73,13 @@ p:last-child {
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.5;
-    margin-bottom: 28px;
+    margin-bottom: 32px;
     color: #2c2c2c;
     letter-spacing: -0.01em;
 }
 
 .intro p {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     font-size: 16px;
     line-height: 1.7;
     color: #2c2c2c;
@@ -89,6 +89,7 @@ p:last-child {
     color: #4a90e2;
     text-decoration: none;
     font-size: 15px;
+    transition: color 0.2s ease;
 }
 
 .about-link:hover {
@@ -122,6 +123,7 @@ p:last-child {
     color: #2c2c2c;
     text-decoration: none;
     font-weight: 500;
+    transition: color 0.2s ease;
 }
 
 .project-link:hover {
@@ -185,14 +187,40 @@ p:last-child {
     font-family: inherit;
     white-space: nowrap;
     letter-spacing: 0.01em;
+    transition: background-color 0.2s ease;
 }
 
 .subscribe-button:hover {
     background-color: #000;
 }
 
-/* Mobile responsive - stack form elements */
-@media (max-width: 640px) {
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 40px 20px;
+    }
+
+    section {
+        margin-bottom: 70px;
+    }
+
+    section:last-child {
+        margin-bottom: 40px;
+    }
+
+    .headline {
+        font-size: 1.375rem;
+        margin-bottom: 28px;
+    }
+
+    .intro p {
+        margin-bottom: 20px;
+    }
+
+    .project-list {
+        gap: 28px;
+    }
+
     .newsletter-form {
         flex-direction: column;
         gap: 12px;
@@ -201,5 +229,23 @@ p:last-child {
     .email-input,
     .subscribe-button {
         width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    section {
+        margin-bottom: 60px;
+    }
+
+    section:last-child {
+        margin-bottom: 30px;
+    }
+
+    .headline {
+        font-size: 1.25rem;
     }
 }
