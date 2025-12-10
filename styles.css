@@ -146,6 +146,29 @@ p:last-child {
     margin-bottom: 0;
 }
 
+/* Connect Section */
+.connect h2 {
+    margin-bottom: 16px;
+}
+
+.connect-text {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #2c2c2c;
+    margin-bottom: 0;
+}
+
+.connect-email {
+    color: #4a90e2;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.connect-email:hover {
+    color: #357abd;
+    text-decoration: underline;
+}
+
 /* Newsletter Section */
 .newsletter h2 {
     margin-bottom: 16px;
