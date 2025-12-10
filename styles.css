@@ -130,6 +130,15 @@ p:last-child {
     color: #4a90e2;
 }
 
+.project-link .arrow {
+    display: inline-block;
+    transition: transform 0.25s ease;
+}
+
+.project-link:hover .arrow {
+    transform: translateX(4px);
+}
+
 .project-description {
     color: #777;
     font-size: 15px;
