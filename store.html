@@ -19,174 +19,67 @@
   <meta name="twitter:title" content="Store — Tristan Swire">
   <meta name="twitter:description" content="Things Tristan Swire actually uses — affiliate products, gear, books, and digital products built for intentional living.">
   <meta name="twitter:image" content="https://tristanswire.com/images/profile.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="alternate icon" href="images/favicon.svg">
   <link rel="stylesheet" href="styles.css">
+  <script>if(localStorage.getItem('theme')==='dark')document.documentElement.classList.add('dark-mode');</script>
 </head>
-<body>
+<body class="store-page">
 
   <nav>
     <div class="wrapper">
-      <a href="index.html" class="nav-brand">Tristan Swire</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="store.html" class="active">Store</a></li>
-      </ul>
+      <a href="index.html" class="nav-brand">TS</a>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="store.html" class="active">Store</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <svg class="toggle-icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <span class="toggle-knob"></span>
+          <svg class="toggle-icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
     </div>
   </nav>
 
   <main>
     <div class="wrapper">
 
-      <!-- Page Hero -->
+      <!-- Page Header -->
       <section class="store-hero">
         <span class="section-label">Store</span>
-        <p class="store-desc">Things I actually use and products I've built. No filler.</p>
+        <h1 class="store-heading">Things I Actually Use</h1>
+        <p class="store-desc">Gear, books, tools and products I use daily. No filler.</p>
+        <p class="affiliate-disclosure">Some links on this page are affiliate links. I only recommend things I actually use.</p>
       </section>
 
       <!-- My Products -->
       <section class="section">
         <span class="section-label">My Products</span>
-        <p class="store-empty">Products coming soon.</p>
-      </section>
-
-      <!-- Affiliate: Morning Routine -->
-      <section class="section">
-        <span class="section-label">Morning Routine</span>
-        <div class="product-grid">
-          <div class="product-card">
-            <div class="product-img"></div>
-            <div class="product-info">
-              <h3 class="product-name">Product Name</h3>
-              <p class="product-desc">A short one-line description of why I use this.</p>
-              <a href="#" class="product-link">Shop →</a>
-            </div>
-          </div>
-          <div class="product-card">
-            <div class="product-img"></div>
-            <div class="product-info">
-              <h3 class="product-name">Product Name</h3>
-              <p class="product-desc">A short one-line description of why I use this.</p>
-              <a href="#" class="product-link">Shop →</a>
+        <div class="shop-grid">
+          <div class="shop-card">
+            <div class="shop-img"></div>
+            <div class="shop-info">
+              <h3 class="shop-name">Coming Soon</h3>
+              <p class="shop-desc">Products in the works. Check back soon.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Affiliate: Fitness -->
+      <!-- Affiliate Products -->
       <section class="section">
-        <span class="section-label">Fitness</span>
-        <div class="product-grid">
-          <div class="product-card">
-            <div class="product-img"></div>
-            <div class="product-info">
-              <h3 class="product-name">Product Name</h3>
-              <p class="product-desc">A short one-line description of why I use this.</p>
-              <a href="#" class="product-link">Shop →</a>
-            </div>
-          </div>
-          <div class="product-card">
-            <div class="product-img"></div>
-            <div class="product-info">
-              <h3 class="product-name">Product Name</h3>
-              <p class="product-desc">A short one-line description of why I use this.</p>
-              <a href="#" class="product-link">Shop →</a>
-            </div>
-          </div>
+        <div class="filter-tags" id="filter-tags">
+          <button class="filter-tag active" data-filter="all">All</button>
+          <button class="filter-tag" data-filter="morning-routine">Morning Routine</button>
+          <button class="filter-tag" data-filter="fitness">Fitness</button>
+          <button class="filter-tag" data-filter="books">Books</button>
+          <button class="filter-tag" data-filter="tech">Tech</button>
         </div>
-      </section>
 
-      <!-- Affiliate: Kitchen -->
-      <section class="section">
-        <span class="section-label">Kitchen</span>
-        <div class="product-grid">
-          <div class="product-card">
-            <div class="product-img"></div>
-            <div class="product-info">
-              <h3 class="product-name">Product Name</h3>
-              <p class="product-desc">A short one-line description of why I use this.</p>
-              <a href="#" class="product-link">Shop →</a>
-            </div>
-          </div>
-          <div class="product-card">
-            <div class="product-img"></div>
-            <div class="product-info">
-              <h3 class="product-name">Product Name</h3>
-              <p class="product-desc">A short one-line description of why I use this.</p>
-              <a href="#" class="product-link">Shop →</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Affiliate: Faith -->
-      <section class="section">
-        <span class="section-label">Faith</span>
-        <div class="product-grid">
-          <div class="product-card">
-            <div class="product-img"></div>
-            <div class="product-info">
-              <h3 class="product-name">Product Name</h3>
-              <p class="product-desc">A short one-line description of why I use this.</p>
-              <a href="#" class="product-link">Shop →</a>
-            </div>
-          </div>
-          <div class="product-card">
-            <div class="product-img"></div>
-            <div class="product-info">
-              <h3 class="product-name">Product Name</h3>
-              <p class="product-desc">A short one-line description of why I use this.</p>
-              <a href="#" class="product-link">Shop →</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Affiliate: Reading -->
-      <section class="section">
-        <span class="section-label">Reading</span>
-        <div class="product-grid">
-          <div class="product-card">
-            <div class="product-img"></div>
-            <div class="product-info">
-              <h3 class="product-name">Product Name</h3>
-              <p class="product-desc">A short one-line description of why I use this.</p>
-              <a href="#" class="product-link">Shop →</a>
-            </div>
-          </div>
-          <div class="product-card">
-            <div class="product-img"></div>
-            <div class="product-info">
-              <h3 class="product-name">Product Name</h3>
-              <p class="product-desc">A short one-line description of why I use this.</p>
-              <a href="#" class="product-link">Shop →</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Affiliate: My Stack -->
-      <section class="section">
-        <span class="section-label">My Stack</span>
-        <div class="product-grid">
-          <div class="product-card">
-            <div class="product-img"></div>
-            <div class="product-info">
-              <h3 class="product-name">Product Name</h3>
-              <p class="product-desc">A short one-line description of why I use this.</p>
-              <a href="#" class="product-link">Shop →</a>
-            </div>
-          </div>
-          <div class="product-card">
-            <div class="product-img"></div>
-            <div class="product-info">
-              <h3 class="product-name">Product Name</h3>
-              <p class="product-desc">A short one-line description of why I use this.</p>
-              <a href="#" class="product-link">Shop →</a>
-            </div>
-          </div>
-        </div>
+        <div class="shop-grid" id="shop-grid"></div>
       </section>
 
     </div>
@@ -194,7 +87,7 @@
 
   <footer>
     <div class="wrapper">
-      <a href="https://swiredev.com" target="_blank" rel="noopener noreferrer">Swire Dev</a> — WordPress development for agencies and designers.
+      <p>© 2026 Tristan Swire. All rights reserved.</p>
     </div>
   </footer>
 
