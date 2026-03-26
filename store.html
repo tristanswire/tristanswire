@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-833MKQTDL2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-833MKQTDL2');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Store — Tristan Swire</title>
@@ -49,28 +57,45 @@
 
       <!-- Page Header -->
       <section class="store-hero">
-        <span class="section-label">Store</span>
-        <h1 class="store-heading">Things I Actually Use</h1>
-        <p class="store-desc">Gear, books, tools and products I use daily. No filler.</p>
-        <p class="affiliate-disclosure">Some links on this page are affiliate links. I only recommend things I actually use.</p>
+        <span class="section-label">STORE</span>
+        <h1 class="store-heading">What I Make. What I Use.</h1>
+        <p class="store-desc">Digital products I've built and the gear that earns its place in my routine.</p>
       </section>
 
-      <!-- My Products -->
-      <section class="section">
-        <span class="section-label">My Products</span>
+      <!-- Made by Me -->
+      <section class="section my-products-section">
+        <span class="section-label">MADE BY ME</span>
         <div class="shop-grid">
-          <div class="shop-card">
-            <div class="shop-img"></div>
+          <a href="wallpaper-pack-vol-1.html" class="shop-card-link">
+            <div class="shop-card shop-card-owned">
+              <div class="shop-img">
+                <img src="images/wallpaper-vol-1/mockup-1.png" alt="Wallpaper Pack Vol. 1" class="shop-img-photo">
+              </div>
+              <div class="shop-info">
+                <span class="shop-tag">$5</span>
+                <h3 class="shop-name">Wallpaper Pack Vol. 1</h3>
+                <p class="shop-desc">8 wallpapers built around discipline and fatherhood. iPhone and desktop.</p>
+              </div>
+            </div>
+          </a>
+          <div class="shop-card shop-card-owned">
+            <div class="shop-img">
+              <img src="images/mesa/mesa-app.png" alt="Mesa app — coming soon" class="shop-img-photo">
+            </div>
             <div class="shop-info">
-              <h3 class="shop-name">Coming Soon</h3>
-              <p class="shop-desc">Products in the works. Check back soon.</p>
+              <span class="shop-tag">COMING SOON</span>
+              <h3 class="shop-name">Mesa</h3>
+              <p class="shop-desc">A distraction-free cooking companion. Import any recipe and follow it step by step — no ads, no scrolling, no noise.</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Affiliate Products -->
-      <section class="section">
+      <section class="section daily-tools-section">
+        <span class="section-label">DAILY TOOLS</span>
+        <h2 class="store-heading">The Everyday Stack.</h2>
+        <p class="store-desc">Gear, supplements, books, and tech I actually use. Some links are affiliate links.</p>
         <div class="filter-tags" id="filter-tags">
           <button class="filter-tag active" data-filter="all">All</button>
           <button class="filter-tag" data-filter="morning-routine">Morning Routine</button>
@@ -81,7 +106,7 @@
 
         <div class="shop-grid" id="shop-grid"></div>
       </section>
-
+      <p class="affiliate-disclosure">Some links on this page are affiliate links. I only recommend things I actually use.</p>
     </div>
   </main>
 

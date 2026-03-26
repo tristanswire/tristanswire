@@ -8,28 +8,28 @@ var products = [
     description: "My daily journal",
     category: "Morning Routine",
     link: "https://amzn.to/3PdrG6U",
-    image: "https://m.media-amazon.com/images/I/81+Zb-xFWpL._AC_SL1500_.jpg"
+    image: "/images/affiliate-products/journal.png"
   },
   {
     name: "BPN Electrolytes",
     description: "My daily go to for electrolytes",
     category: "Morning Routine",
     link: "https://amzn.to/4rB2l44",
-    image: "https://m.media-amazon.com/images/I/71pDajbcERL._AC_SL1500_.jpg"
+    image: "/images/affiliate-products/electrolytes.png"
   },
   {
     name: "HydroJug Water Bottle",
     description: "Only reason I drink enough water",
     category: "Morning Routine",
     link: "https://amzn.to/4by6Aru",
-    image: "https://m.media-amazon.com/images/I/41scmJ0PD4L._AC_SL1500_.jpg"
+    image: "/images/affiliate-products/water-bottle.png"
   },
   {
     name: "ESV Bible",
     description: "Daily reading",
     category: "Morning Routine",
     link: "https://amzn.to/3NwtdED",
-    image: "https://m.media-amazon.com/images/I/81h-zxoh9nL._SL1500_.jpg"
+    image: "/images/affiliate-products/esv-bible.png"
   },
 
   // Fitness
@@ -38,56 +38,56 @@ var products = [
     description: "Great for warming up or at home workouts",
     category: "Fitness",
     link: "https://amzn.to/4sW098E",
-    image: "https://m.media-amazon.com/images/I/614AO333IYL._AC_SL1500_.jpg"
+    image: "/images/affiliate-products/gym-bands.png"
   },
   {
     name: "Adjustable Dumbbells",
     description: "Great for keeping your workout space clutter free",
     category: "Fitness",
     link: "https://amzn.to/4lJBoKw",
-    image: "https://m.media-amazon.com/images/I/81yF5CpdlLL._AC_SL1500_.jpg"
+    image: "/images/affiliate-products/dumbbells.png"
   },
   {
     name: "Weighted Vest 20lbs",
     description: "Game changer for walks",
     category: "Fitness",
     link: "https://amzn.to/4lF46Mv",
-    image: "https://m.media-amazon.com/images/I/81yLQ9fCS8L._AC_SL1500_.jpg"
+    image: "/images/affiliate-products/vest.png"
   },
   {
     name: "Brooks Launch 11",
     description: "Daily running and walking shoe",
     category: "Fitness",
     link: "https://amzn.to/419PLOz",
-    image: "https://m.media-amazon.com/images/I/71NNgYDoHHL._AC_SL1500_.jpg"
+    image: "/images/affiliate-products/brooks-launch.png"
   },
   {
     name: "Garmin Watch",
     description: "My fitness tracker",
     category: "Fitness",
     link: "https://amzn.to/4tcIZ6X",
-    image: "https://m.media-amazon.com/images/I/51-PWE7CmvL._AC_SL1500_.jpg"
+    image: "/images/affiliate-products/garmin.png"
   },
   {
     name: "Naked Protein Chocolate",
     description: "My daily protein",
     category: "Fitness",
     link: "https://amzn.to/4cQ7uSk",
-    image: "https://m.media-amazon.com/images/I/71cHxFpRUHL._AC_SL1500_.jpg"
+    image: "/images/affiliate-products/protein.png"
   },
   {
     name: "Naked Creatine",
     description: "Daily creatine supplement",
     category: "Fitness",
     link: "https://amzn.to/4rHWKcy",
-    image: "https://m.media-amazon.com/images/I/61K4wesezOL._AC_SL1500_.jpg"
+    image: "/images/affiliate-products/creatine.png"
   },
   {
     name: "Naked Collagen",
     description: "Daily collagen supplement",
     category: "Fitness",
     link: "https://amzn.to/4bUHHXd",
-    image: "https://m.media-amazon.com/images/I/611aaBgc72L._AC_SL1500_.jpg"
+    image: "/images/affiliate-products/collagen.png"
   },
 
   // Books
@@ -119,42 +119,42 @@ var products = [
     description: "Laptop I use to create all my content",
     category: "Tech",
     link: "https://amzn.to/4bQBlcg",
-    image: "https://m.media-amazon.com/images/I/61-oTP1X4rL._AC_SL1500_.jpg"
+    image: "/images/affiliate-products/macbook-pro.png"
   },
   {
     name: "iPhone 17 Pro 1TB",
     description: "Phone for all my editing",
     category: "Tech",
     link: "https://amzn.to/4siA4jZ",
-    image: "https://m.media-amazon.com/images/I/41OYHDLr-vL._AC_SL1500_.jpg"
+    image: "/images/affiliate-products/iphone.png"
   },
   {
     name: "Apple AirPods Pro 3",
     description: "Best in ear headphones I've ever used",
     category: "Tech",
     link: "https://amzn.to/3PeY9d2",
-    image: "https://m.media-amazon.com/images/I/61solmQSSlL._AC_SL1500_.jpg"
+    image: "/images/affiliate-products/airpods.png"
   },
   {
     name: "nuphy Kick75 Keyboard",
     description: "Super quiet, great replacement for laptop keyboard",
     category: "Tech",
     link: "https://amzn.to/4lDDStK",
-    image: "https://m.media-amazon.com/images/I/61bQrTxtMlL._AC_SL1500_.jpg"
+    image: "/images/affiliate-products/keyboard.png"
   },
   {
     name: "Tripod for iPhone",
     description: "My go to for recording",
     category: "Tech",
     link: "https://amzn.to/4sQMxva",
-    image: "https://m.media-amazon.com/images/I/61LnPbT7KML._AC_SL1500_.jpg"
+    image: "/images/affiliate-products/tripod.png"
   },
   {
     name: "Shure SM7B Microphone",
     description: "Mic for all audio recording",
     category: "Tech",
     link: "https://amzn.to/3Nww2FI",
-    image: "https://m.media-amazon.com/images/I/71LYHO3+wnL._AC_SL1500_.jpg"
+    image: "/images/affiliate-products/shure-mic.png"
   }
 ];
 
@@ -169,15 +169,16 @@ function renderProducts() {
       ? '<div class="shop-img"><img src="' + p.image + '" alt="' + p.name + '" class="shop-img-photo"></div>'
       : '<div class="shop-img"></div>';
 
-    return '<div class="shop-card" data-category="' + slug + '">'
+    return '<a href="' + p.link + '" class="shop-card-link" data-category="' + slug + '" target="_blank" rel="noopener noreferrer">'
+      + '<div class="shop-card">'
       + imgContent
       + '<div class="shop-info">'
       + '<span class="shop-tag">' + p.category + '</span>'
       + '<h3 class="shop-name">' + p.name + '</h3>'
       + '<p class="shop-desc">' + p.description + '</p>'
-      + '<a href="' + p.link + '" class="shop-link" target="_blank" rel="noopener noreferrer">Shop →</a>'
       + '</div>'
-      + '</div>';
+      + '</div>'
+      + '</a>';
   }).join('');
 }
 
@@ -191,7 +192,7 @@ function initFilter() {
       tags.forEach(function (t) { t.classList.remove('active'); });
       tag.classList.add('active');
       var filter = tag.getAttribute('data-filter');
-      var cards = document.querySelectorAll('.shop-card[data-category]');
+      var cards = document.querySelectorAll('.shop-card-link[data-category]');
       cards.forEach(function (card) {
         card.style.display =
           (filter === 'all' || card.getAttribute('data-category') === filter)
@@ -204,6 +205,23 @@ function initFilter() {
 
 renderProducts();
 initFilter();
+
+// ─── Beehiiv iframe height fix ────────────────────
+function fixBeehiivHeight() {
+  const iframes = document.querySelectorAll('iframe');
+  iframes.forEach(iframe => {
+    if (iframe.src && iframe.src.includes('beehiiv')) {
+      iframe.style.setProperty('height', 'auto', 'important');
+      iframe.style.setProperty('min-height', '0', 'important');
+      iframe.removeAttribute('height');
+    }
+  });
+}
+
+// Run on load and after a short delay to catch late injection
+window.addEventListener('load', fixBeehiivHeight);
+setTimeout(fixBeehiivHeight, 500);
+setTimeout(fixBeehiivHeight, 1500);
 
 // ─── Dark/light mode toggle ────────────────────────
 (function () {
