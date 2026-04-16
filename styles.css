@@ -66,7 +66,7 @@ body {
   color: var(--color-text);
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -127,7 +127,7 @@ nav .wrapper {
 
 .nav-brand {
   font-family: var(--font-display) !important;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 800;
   color: var(--color-text);
   letter-spacing: 0.01em;
@@ -152,7 +152,7 @@ nav .wrapper {
 
 .nav-links a {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   color: var(--color-text-muted);
   letter-spacing: 0.03em;
@@ -268,7 +268,7 @@ footer {
 
 footer .wrapper {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   color: var(--text-subtle);
   display: flex;
@@ -311,7 +311,7 @@ footer a:hover {
 .section-label {
   display: block;
   font-family: var(--font-body);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 800;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -345,7 +345,7 @@ footer a:hover {
 
 .hero-tagline {
   font-family: var(--font-body);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 800;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -356,7 +356,7 @@ footer a:hover {
 
 .hero-bio {
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.8;
   color: var(--text-muted);
@@ -378,7 +378,7 @@ footer a:hover {
 
 .project-name {
   font-family: 'DM Sans', sans-serif !important;
-  font-size: 22px;
+  font-size: 23px;
   font-weight: 600;
   line-height: 1;
   color: var(--color-text);
@@ -386,7 +386,7 @@ footer a:hover {
 
 .project-badge {
   font-family: var(--font-body);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -395,7 +395,7 @@ footer a:hover {
 
 .project-desc {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 1.75;
   color: var(--text-muted);
@@ -409,7 +409,7 @@ footer a:hover {
   border: none;
   padding: 10px 24px;
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.05em;
   cursor: pointer;
@@ -443,7 +443,7 @@ html.dark-mode .btn-cta:hover {
 /* Newsletter */
 .newsletter-desc {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   color: var(--text-muted);
   line-height: 1.7;
@@ -496,7 +496,7 @@ iframe[src*="beehiiv"] {
   border-radius: 0 !important;
   color: var(--color-text) !important;
   font-family: var(--font-body) !important;
-  font-size: 14px !important;
+  font-size: 15px !important;
   font-weight: 400 !important;
   padding: 11px 16px !important;
   outline: none !important;
@@ -521,7 +521,7 @@ iframe[src*="beehiiv"] {
   border-radius: 0 !important;
   padding: 10px 24px !important;
   font-family: var(--font-body) !important;
-  font-size: 13px !important;
+  font-size: 14px !important;
   font-weight: 500 !important;
   letter-spacing: 0.05em !important;
   cursor: pointer !important;
@@ -560,7 +560,7 @@ html.dark-mode .newsletter-embed input[type="email"] {
 
 .newsletter-note {
   font-family: var(--font-body);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 400;
   color: var(--text-subtle);
   font-style: italic;
@@ -570,7 +570,7 @@ html.dark-mode .newsletter-embed input[type="email"] {
 /* Building Section */
 .building-desc {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 1.75;
   color: var(--text-muted);
@@ -608,7 +608,7 @@ html.dark-mode .newsletter-embed input[type="email"] {
 
 .building-item-name {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--color-text);
   line-height: 1.3;
@@ -616,12 +616,12 @@ html.dark-mode .newsletter-embed input[type="email"] {
 
 .building-item-name span {
   font-weight: 800;
-  font-size: 16px
+  font-size: 17px
 }
 
 .building-item-desc {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   color: var(--text-muted);
   line-height: 1.6;
@@ -637,14 +637,14 @@ html.dark-mode .newsletter-embed input[type="email"] {
 
 .building-item-price {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--color-text);
 }
 
 .building-item-status {
   font-family: var(--font-body);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -653,7 +653,7 @@ html.dark-mode .newsletter-embed input[type="email"] {
 
 .building-item-link {
   font-family: var(--font-body);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   color: var(--color-accent);
   letter-spacing: 0.03em;
@@ -676,7 +676,7 @@ html.dark-mode .newsletter-embed input[type="email"] {
 
 .services-desc {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 1.75;
   color: var(--text-muted);
@@ -693,7 +693,7 @@ html.dark-mode .newsletter-embed input[type="email"] {
 
 .service-name {
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
   color: var(--color-text);
   margin-bottom: 4px;
@@ -701,7 +701,7 @@ html.dark-mode .newsletter-embed input[type="email"] {
 
 .service-desc {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.65;
   color: var(--text-muted);
@@ -710,7 +710,7 @@ html.dark-mode .newsletter-embed input[type="email"] {
 /* Connect */
 .connect-desc {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   color: var(--text-muted);
   line-height: 1.75;
@@ -725,7 +725,7 @@ html.dark-mode .newsletter-embed input[type="email"] {
 
 .social-links a {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   color: var(--color-text);
   display: inline-flex;
@@ -740,12 +740,12 @@ html.dark-mode .newsletter-embed input[type="email"] {
 
 .social-arrow {
   color: var(--color-accent);
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .social-handle {
   color: var(--text-subtle);
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .social-links a:hover .social-handle {
@@ -773,7 +773,7 @@ html.dark-mode .newsletter-embed input[type="email"] {
 
 .store-desc {
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   color: var(--text-muted);
   line-height: 1.7;
@@ -783,7 +783,7 @@ html.dark-mode .newsletter-embed input[type="email"] {
 
 .affiliate-disclosure {
   font-family: var(--font-body);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 400;
   color: var(--text-subtle);
   font-style: italic;
@@ -801,7 +801,7 @@ html.dark-mode .newsletter-embed input[type="email"] {
 
 .filter-tag {
   font-family: var(--font-body);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.03em;
   color: var(--text-subtle);
@@ -903,7 +903,7 @@ html.dark-mode .shop-img {
 
 .shop-tag {
   font-family: var(--font-body);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -912,7 +912,7 @@ html.dark-mode .shop-img {
 
 .shop-name {
   font-family: 'DM Sans', sans-serif !important;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--color-text);
   line-height: 1.3;
@@ -920,7 +920,7 @@ html.dark-mode .shop-img {
 
 .shop-desc {
   font-family: var(--font-body);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
   color: var(--text-muted);
   line-height: 1.65;
@@ -929,7 +929,7 @@ html.dark-mode .shop-img {
 
 .shop-link {
   font-family: var(--font-body);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   color: var(--color-accent);
   letter-spacing: 0.03em;
@@ -978,7 +978,7 @@ html.dark-mode .shop-img {
   }
 
   .hero-bio {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .section {
@@ -1018,12 +1018,12 @@ html.dark-mode .shop-img {
   }
 
   .hero-bio {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.85;
   }
 
   .store-desc {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .shop-grid {
