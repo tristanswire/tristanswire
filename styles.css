@@ -608,7 +608,7 @@ html.dark-mode .newsletter-embed input[type="email"] {
 
 .building-item-name {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--color-text);
   line-height: 1.3;
