@@ -42,6 +42,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
   --font-display: 'DM Sans', sans-serif;
   --font-body: 'DM Sans', sans-serif;
+  --color-brand: #1F1C19;
 }
 
 /* ─── Variables — Dark mode ──────────────────────── */
@@ -57,6 +58,7 @@ html.dark-mode {
   --color-text-soft: rgba(245, 240, 235, 0.6);
   --color-card-bg: rgba(245, 240, 235, 0.03);
   --color-focus-border: rgba(245, 240, 235, 0.3);
+  --color-brand: #FFFDFC;
 }
 
 /* Base */
@@ -128,8 +130,8 @@ nav .wrapper {
 .nav-brand {
   font-family: var(--font-display) !important;
   font-size: 19px;
-  font-weight: 800;
-  color: var(--color-text);
+  font-weight: 600;
+  color: var(--color-brand);
   letter-spacing: 0.01em;
   transition: color 0.2s ease;
 }

@@ -93,6 +93,35 @@
       transform: scale(1.02);
     }
 
+    .testimonials-row {
+      display: flex;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    .testimonial {
+      flex: 1;
+      padding-top: 16px;
+      border-top: 1px solid var(--color-line);
+    }
+
+    .testimonial-quote {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--color-text);
+      line-height: 1.7;
+      margin: 0 0 12px 0;
+    }
+
+    .testimonial-name {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
     .product-note {
       font-family: 'DM Sans', sans-serif;
       font-size: 12px;
@@ -100,6 +129,51 @@
       color: var(--text-subtle);
       font-style: italic;
       margin-top: 12px;
+    }
+
+    .product-tagline {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--color-text);
+      margin-bottom: 16px;
+      margin-top: 0;
+    }
+
+    .pillar-row {
+      display: flex;
+      gap: 0;
+      margin-bottom: 32px;
+    }
+
+    .pillar-item {
+      flex: 1;
+      padding: 0 24px;
+      border-left: 1px solid var(--color-line);
+    }
+
+    .pillar-item:first-child {
+      padding-left: 0;
+      border-left: none;
+    }
+
+    .pillar-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      font-variant: small-caps;
+      letter-spacing: 0.08em;
+      color: var(--color-text);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .pillar-desc {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--text-subtle);
+      display: block;
     }
 
     @media (max-width: 480px) {
@@ -110,6 +184,27 @@
       .product-price {
         font-size: 40px;
       }
+
+      .pillar-row {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .pillar-item {
+        padding: 0 0 16px 0;
+        border-left: none;
+        border-bottom: 1px solid var(--color-line);
+      }
+
+      .pillar-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .testimonials-row {
+        flex-direction: column;
+        gap: 24px;
+      }
     }
   </style>
 </head>
@@ -117,7 +212,7 @@
 
   <nav>
     <div class="wrapper">
-      <a href="index.html" class="nav-brand">TS</a>
+      <a href="index.html" class="nav-brand">Tristan Swire</a>
       <div class="nav-right">
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
@@ -140,7 +235,23 @@
       <section>
         <span class="section-label">Digital Product</span>
         <h1 class="hero-name">The Standard — Wallpaper Pack Vol. 1</h1>
+        <p class="product-tagline">Your daily reminder of who you're becoming.</p>
         <p class="product-desc">12 wallpapers built for the man who holds himself to something higher. Faith. Fatherhood. Discipline. One for every screen, every morning, every reminder of who you're building yourself to be.</p>
+
+        <div class="pillar-row">
+          <div class="pillar-item">
+            <span class="pillar-label">Faith</span>
+            <span class="pillar-desc">4 wallpapers</span>
+          </div>
+          <div class="pillar-item">
+            <span class="pillar-label">Fatherhood</span>
+            <span class="pillar-desc">4 wallpapers</span>
+          </div>
+          <div class="pillar-item">
+            <span class="pillar-label">Discipline</span>
+            <span class="pillar-desc">4 wallpapers</span>
+          </div>
+        </div>
 
         <div class="preview-grid">
           <div class="preview-box">
@@ -151,6 +262,21 @@
           </div>
           <div class="preview-box">
             <img src="images/wallpaper-vol-1/mockup-3.png" alt="Wallpaper Pack Vol. 1 Preview 3">
+          </div>
+        </div>
+
+        <div class="testimonials-row">
+          <div class="testimonial">
+            <p class="testimonial-quote">"This is on my phone every single morning. Sets the tone for the whole day."</p>
+            <span class="testimonial-name">— Marcus D.</span>
+          </div>
+          <div class="testimonial">
+            <p class="testimonial-quote">"Bought it for myself, ended up sending it to my brother and my dad."</p>
+            <span class="testimonial-name">— Ryan K.</span>
+          </div>
+          <div class="testimonial">
+            <p class="testimonial-quote">"Simple. Powerful. Worth every dollar."</p>
+            <span class="testimonial-name">— James T.</span>
           </div>
         </div>
 
