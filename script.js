@@ -228,10 +228,14 @@ setTimeout(fixBeehiivHeight, 1500);
   var toggle = document.getElementById('theme-toggle');
   if (!toggle) return;
 
+  // Sync aria-pressed with the initial theme state (set before body by inline script)
+  toggle.setAttribute('aria-pressed', String(document.documentElement.classList.contains('dark-mode')));
+
   toggle.addEventListener('click', function () {
     var html = document.documentElement;
     html.classList.toggle('dark-mode');
     var isDark = html.classList.contains('dark-mode');
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    toggle.setAttribute('aria-pressed', String(isDark));
   });
 })();
