@@ -347,7 +347,7 @@ footer a:hover {
 
 .hero-name {
   font-family: 'DM Sans', sans-serif !important;
-  font-size: clamp(36px, 5vw, 52px);
+  font-size: 36px;
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.01em;
@@ -394,8 +394,8 @@ html.dark-mode .btn-cta:hover {
 /* Section display headings */
 .agency-name {
   font-family: 'DM Sans', sans-serif !important;
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 30px;
+  font-weight: 700;
   line-height: 1.2;
   color: var(--color-text);
   margin-bottom: 4px;
