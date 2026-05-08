@@ -67,7 +67,7 @@ body {
   color: var(--color-text);
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -114,7 +114,7 @@ a {
 /* Wrapper */
 .wrapper {
   width: 100%;
-  max-width: 650px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -404,7 +404,7 @@ html.dark-mode .btn-cta:hover {
 /* Newsletter */
 .newsletter-desc {
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 400;
   color: var(--text-muted);
   line-height: 1.7;
@@ -531,7 +531,7 @@ html.dark-mode .newsletter-embed input[type="email"] {
 /* Building Section */
 .building-desc {
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.75;
   color: var(--text-muted);
@@ -582,7 +582,7 @@ html.dark-mode .newsletter-embed input[type="email"] {
 
 .building-item-desc {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color: var(--text-muted);
   line-height: 1.6;
@@ -616,7 +616,7 @@ html.dark-mode .newsletter-embed input[type="email"] {
 
 .building-item-link {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--color-accent);
   letter-spacing: 0.03em;
@@ -639,7 +639,7 @@ html.dark-mode .newsletter-embed input[type="email"] {
 
 .work-desc {
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.7;
   color: var(--text-muted);
@@ -648,7 +648,7 @@ html.dark-mode .newsletter-embed input[type="email"] {
 
 .work-link {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--color-accent);
   text-decoration: underline;
@@ -662,7 +662,7 @@ html.dark-mode .newsletter-embed input[type="email"] {
 /* Connect */
 .connect-desc {
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 400;
   color: var(--text-muted);
   line-height: 1.75;
@@ -677,7 +677,7 @@ html.dark-mode .newsletter-embed input[type="email"] {
 
 .social-links a {
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   color: var(--color-text);
   display: inline-flex;
