@@ -67,7 +67,7 @@ body {
   color: var(--color-text);
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -298,9 +298,17 @@ footer a:hover {
 
 /* Sections */
 .section {
-  margin-top: 40px;
-  padding-top: 40px;
+  margin-top: 50px;
+  padding-top: 50px;
   border-top: 1px solid var(--color-line);
+}
+
+.section:last-of-type {
+  margin-top: 0;
+}
+
+.section#newsletter {
+  margin-bottom: -25px;
 }
 
 .my-products-section {
@@ -356,10 +364,103 @@ footer a:hover {
 
 .hero-subheadline {
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
   line-height: 1.7;
   color: var(--text-muted);
+}
+
+/* Hero entry-point cards */
+.hero-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.hero-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-card-bg);
+  border: 2px solid var(--card-border-color);
+  border-radius: 12px;
+  padding: 1.25rem;
+  min-height: 200px;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.hero-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.hero-card-eyebrow {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  margin-bottom: 8px;
+}
+
+.hero-card-title {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.hero-card-desc {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.hero-card-cta {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--card-cta-color);
+  margin-top: 12px;
+  letter-spacing: 0.02em;
+}
+
+.hero-card-sunday {
+  --card-border-color: #C9A876;
+  --card-cta-color: #8A6D3B;
+}
+
+.hero-card-swire {
+  --card-border-color: #7C3AED;
+  --card-cta-color: #7C3AED;
+}
+
+.hero-card-mesa {
+  --card-border-color: #364032;
+  --card-cta-color: #364032;
+}
+
+html.dark-mode .hero-card-sunday {
+  --card-border-color: #D9B98C;
+  --card-cta-color: #D9B98C;
+}
+
+html.dark-mode .hero-card-swire {
+  --card-border-color: #A78BFA;
+  --card-cta-color: #A78BFA;
+}
+
+html.dark-mode .hero-card-mesa {
+  --card-border-color: #97A581;
+  --card-cta-color: #97A581;
 }
 
 /* CTA Button */
@@ -404,7 +505,7 @@ html.dark-mode .btn-cta:hover {
 /* Newsletter */
 .newsletter-desc {
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
   color: var(--text-muted);
   line-height: 1.7;
@@ -531,7 +632,7 @@ html.dark-mode .newsletter-embed input[type="email"] {
 /* Building Section */
 .building-desc {
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
   line-height: 1.75;
   color: var(--text-muted);
@@ -548,16 +649,7 @@ html.dark-mode .newsletter-embed input[type="email"] {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--color-line);
-}
-
-.building-item:first-child {
-  border-top: 1px solid var(--color-line);
-}
-
-.building-item:last-child {
-  border-bottom: none;
+  padding: 0 0 48px 0;
 }
 
 .building-item-left {
@@ -639,7 +731,7 @@ html.dark-mode .newsletter-embed input[type="email"] {
 
 .work-desc {
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
   line-height: 1.7;
   color: var(--text-muted);
@@ -662,7 +754,7 @@ html.dark-mode .newsletter-embed input[type="email"] {
 /* Connect */
 .connect-desc {
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
   color: var(--text-muted);
   line-height: 1.75;
@@ -903,6 +995,10 @@ html.dark-mode .shop-img {
 
   .hero-photo {
     margin-bottom: 4px;
+  }
+
+  .hero-cards {
+    grid-template-columns: 1fr;
   }
 
   .section {
