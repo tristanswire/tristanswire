@@ -1,6 +1,4 @@
-// Newsletter form logic
-
-// ─── Products ─────────────────────────────────────
+// ─── Products (used by the unlinked store.html page) ──
 var products = [
   // Morning Routine
   {
@@ -158,7 +156,6 @@ var products = [
   }
 ];
 
-// ─── Render products into #shop-grid ──────────────
 function renderProducts() {
   var grid = document.getElementById('shop-grid');
   if (!grid) return;
@@ -182,7 +179,6 @@ function renderProducts() {
   }).join('');
 }
 
-// ─── Store filter ──────────────────────────────────
 function initFilter() {
   var tags = document.querySelectorAll('.filter-tag');
   if (!tags.length) return;
@@ -205,37 +201,3 @@ function initFilter() {
 
 renderProducts();
 initFilter();
-
-// ─── Beehiiv iframe height fix ────────────────────
-function fixBeehiivHeight() {
-  const iframes = document.querySelectorAll('iframe');
-  iframes.forEach(iframe => {
-    if (iframe.src && iframe.src.includes('beehiiv')) {
-      iframe.style.setProperty('height', 'auto', 'important');
-      iframe.style.setProperty('min-height', '0', 'important');
-      iframe.removeAttribute('height');
-    }
-  });
-}
-
-// Run on load and after a short delay to catch late injection
-window.addEventListener('load', fixBeehiivHeight);
-setTimeout(fixBeehiivHeight, 500);
-setTimeout(fixBeehiivHeight, 1500);
-
-// ─── Dark/light mode toggle ────────────────────────
-(function () {
-  var toggle = document.getElementById('theme-toggle');
-  if (!toggle) return;
-
-  // Sync aria-pressed with the initial theme state (set before body by inline script)
-  toggle.setAttribute('aria-pressed', String(document.documentElement.classList.contains('dark-mode')));
-
-  toggle.addEventListener('click', function () {
-    var html = document.documentElement;
-    html.classList.toggle('dark-mode');
-    var isDark = html.classList.contains('dark-mode');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    toggle.setAttribute('aria-pressed', String(isDark));
-  });
-})();
