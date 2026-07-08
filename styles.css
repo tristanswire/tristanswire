@@ -35,8 +35,6 @@ p, h1, h2, h3, h4, h5, h6 {
   --text-subtle: #8A8278;
   --border-subtle: rgba(0, 0, 0, 0.08);
   --accent: #2563EB;
-  --swire-gradient: linear-gradient(135deg, #3B5BFF 0%, #A855F7 100%);
-  --mesa-accent: #b34519;
 
   --font-display: 'DM Sans', sans-serif;
   --font-body: 'DM Sans', sans-serif;
@@ -102,7 +100,7 @@ a {
   max-width: 1100px;
 }
 
-/* Navigation */
+/* Navigation (used by unlinked store.html / wallpaper-pack-vol-1.html) */
 nav {
   padding: 32px 0;
 }
@@ -151,21 +149,227 @@ main {
   padding: 24px 0 96px;
 }
 
-/* Hero */
-.hero {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding-bottom: 16px;
+/* ══════════════════════════════════════════════════════════════
+   Landing page  —  index.html  (body.bio)
+   Link-in-bio for the personal brand. Warm, editorial, one screen.
+   Namespaced under body.bio so it never touches the legacy pages.
+   ══════════════════════════════════════════════════════════════ */
+
+body.bio {
+  --paper: #FBF8F3;
+  --ink: #1C1917;
+  --ink-soft: #55504A;
+  --ink-faint: #8A837A;
+  --accent: #B5451F;           /* warm rust — the one accent */
+  --rule: rgba(28, 25, 23, 0.12);
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);   /* one sans family across the whole page */
+  line-height: 1.6;
 }
 
-.hero-photo {
-  width: 80px;
-  height: 80px;
+.bio-main {
+  flex: 1;
+  padding: 72px 24px 64px;
+}
+
+.bio-inner {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* 1 — identity */
+.bio-photo {
+  width: 88px;
+  height: 88px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 8px;
+  margin-bottom: 28px;
 }
+
+.bio-throughline {
+  font-family: var(--font-sans);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+}
+
+.bio-intro {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+/* 2 — email capture */
+.bio-signup {
+  margin-top: 44px;
+  padding-top: 44px;
+  border-top: 1px solid var(--rule);
+}
+
+.bio-signup-name {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.bio-signup-pitch {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin-bottom: 24px;
+}
+
+/* beehiiv-hosted embed — the loader injects its own iframe/markup here.
+   We can only control the container: full width up to the page column,
+   and comfortably tappable at ~375px. */
+.newsletter-embed {
+  width: 100%;
+  max-width: 100%;
+}
+
+.newsletter-embed iframe {
+  width: 100%;
+  max-width: 100%;
+  border: none;
+}
+
+/* Perk line under the form */
+.bio-signup-perk {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-faint);
+}
+
+/* 3 — start here */
+.bio-starthere {
+  margin-top: 52px;
+}
+
+.bio-starthere-link {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 2px;
+  transition: color 0.15s ease;
+}
+
+.bio-starthere-link:hover {
+  color: var(--accent);
+}
+
+/* 4 — making (quiet list of things I build) */
+.bio-making {
+  border-top: 1px solid var(--rule);
+  margin-top: 52px;
+  padding-top: 52px;
+}
+
+.bio-making-label {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 16px;
+}
+
+.bio-making-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bio-making-item {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.bio-making-name {
+  font-weight: 600;
+  color: var(--ink-soft);
+  text-decoration: underline;
+  text-decoration-color: rgba(28, 25, 23, 0.25);
+  text-underline-offset: 2px;
+}
+
+.bio-making-name:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+.bio-making-desc {
+  font-weight: 400;
+  color: var(--ink-faint);
+}
+
+/* 5 — footer */
+.bio-footer {
+  margin-top: 44px;
+  padding: 44px 0 0;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--ink-faint);
+}
+
+.bio-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 4px 0;
+  color: var(--ink-soft);
+  transition: color 0.15s ease;
+}
+
+.bio-footer a:hover {
+  color: var(--accent);
+}
+
+/* Contact icons — inherit the muted link color via currentColor */
+.bio-footer-icon {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+
+.bio-footer span {
+  border-top: 1px solid var(--rule);
+  padding-top: 44px;
+  margin-top: 44px;
+}
+
+@media (max-width: 480px) {
+  .bio-main {
+    padding: 48px 22px 48px;
+  }
+
+  .bio-throughline {
+    font-size: 26px;
+  }
+}
+
+/* ─── Legacy styles for unlinked pages (store.html, wallpaper-pack-vol-1.html) ───
+   These pages remain in the repo but are not linked from index.html. The
+   .hero-name / .section / .section-label rules below are shared with them, so
+   they are kept even though the landing page no longer uses them. */
 
 .hero-name {
   font-family: 'DM Sans', sans-serif;
@@ -176,21 +380,6 @@ main {
   color: var(--text-primary);
 }
 
-.hero-subheadline {
-  font-family: var(--font-body);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.6;
-  color: var(--text-muted);
-  max-width: 620px;
-}
-
-.hero .btn-swire {
-  align-self: flex-start;
-  margin-top: 0;
-}
-
-/* Sections */
 .section {
   margin-top: 36px;
   padding-top: 48px;
@@ -220,189 +409,7 @@ main {
   opacity: 0.6;
 }
 
-.section-label-accent {
-  color: var(--accent);
-}
-
-.section-label-mesa {
-  color: var(--mesa-accent);
-}
-
-.section-heading {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
-  color: var(--text-primary);
-}
-
-.section-desc {
-  font-family: var(--font-body);
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 1.7;
-  color: var(--text-muted);
-}
-
-.section .btn-swire,
-.section .btn-mesa {
-  align-self: flex-start;
-  margin-top: 2px;
-}
-
-/* Service list (Swire section) */
-.service-list {
-  list-style: none;
-  padding: 0;
-  margin: 4px 0 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.service-list li {
-  font-family: var(--font-body);
-  font-size: 15px;
-  color: var(--text-muted);
-  font-weight: 400;
-}
-
-/* Availability label — sits above the Swire Studio section heading */
-.availability-label {
-  display: inline-flex;
-  align-self: flex-start;
-  align-items: center;
-  font-family: var(--font-body);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--accent);
-  background: rgba(37, 99, 235, 0.08);
-  border: 1px solid rgba(37, 99, 235, 0.18);
-  padding: 6px 12px;
-  border-radius: 6px;
-  margin-bottom: 4px;
-}
-
-/* Mesa feature list */
-.mesa-features {
-  list-style: none;
-  padding: 0;
-  margin: 4px 0 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.mesa-features li {
-  font-family: var(--font-body);
-  font-size: 15px;
-  color: var(--text-muted);
-}
-
-/* About — stats row */
-.stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  margin: 8px 0 8px;
-  padding: 18px 0;
-  border-top: 1px solid var(--border-subtle);
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.stat {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.stat-number {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--text-primary);
-  line-height: 1;
-}
-
-.stat-label {
-  font-family: var(--font-body);
-  font-size: 12px;
-  color: var(--text-subtle);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-/* About — social links row */
-.about-socials {
-  display: flex;
-  gap: 24px;
-  margin-top: 28px;
-}
-
-.about-socials a {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--text-muted);
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.about-socials a:hover {
-  color: var(--accent);
-}
-
-.about-socials svg {
-  flex-shrink: 0;
-}
-
-/* CTA buttons */
-.btn-swire {
-  display: inline-block;
-  background: var(--swire-gradient);
-  color: #FFFFFF;
-  padding: 14px 28px;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  transition: filter 0.2s ease;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.btn-swire:hover {
-  filter: brightness(1.1);
-}
-
-.btn-mesa {
-  display: inline-block;
-  background: #b34519;
-  color: #FFFFFF;
-  padding: 14px 28px;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  transition: background 0.2s ease;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.btn-mesa:hover {
-  background: #9c3c16;
-}
-
-/* Footer */
+/* Footer (shared shell — legacy pages use a plain <p> inside) */
 footer {
   padding: 32px 0;
   border-top: 1px solid var(--border-subtle);
@@ -415,35 +422,6 @@ footer .wrapper {
   flex-wrap: wrap;
   gap: 16px;
 }
-
-.footer-copy {
-  font-family: var(--font-body);
-  font-size: 13px;
-  font-weight: 400;
-  color: var(--text-subtle);
-}
-
-.footer-links {
-  list-style: none;
-  display: flex;
-  gap: 24px;
-}
-
-.footer-links a {
-  font-family: var(--font-body);
-  font-size: 13px;
-  font-weight: 400;
-  color: var(--text-subtle);
-  transition: color 0.2s ease;
-}
-
-.footer-links a:hover {
-  color: var(--text-primary);
-}
-
-/* ─── Legacy styles for unlinked pages (store.html, wallpaper-pack-vol-1.html) ───
-   These pages remain in the repo but are not linked from index.html. The styles
-   below keep them visually functional if accessed directly. */
 
 .accent-line {
   width: 100%;
@@ -666,14 +644,6 @@ footer .wrapper {
     padding: 16px 0 72px;
   }
 
-  .hero {
-    gap: 16px;
-  }
-
-  .hero-photo {
-    margin-bottom: 4px;
-  }
-
   .hero-name {
     font-size: 32px;
   }
@@ -681,10 +651,6 @@ footer .wrapper {
   .section {
     margin-top: 36px;
     padding-top: 36px;
-  }
-
-  .section-heading {
-    font-size: 28px;
   }
 
   .shop-grid {
@@ -695,13 +661,6 @@ footer .wrapper {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
-  }
-}
-
-@media (max-width: 600px) {
-  .stats {
-    grid-template-columns: 1fr;
-    gap: 16px;
   }
 }
 
@@ -722,11 +681,6 @@ footer .wrapper {
     min-height: 44px;
     display: inline-flex;
     align-items: center;
-  }
-
-  .footer-links {
-    gap: 16px;
-    flex-wrap: wrap;
   }
 }
 
